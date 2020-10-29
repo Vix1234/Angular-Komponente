@@ -1,0 +1,15 @@
+<label>Ime studenta:</label>
+<!--<input type="text" class="form-control" (input)="onUpdateStudentName($event)"/>!-->
+<input type="text" class="form-control" [(ngModel)]="studentIme"/>
+<p>{{studentIme}}</p>
+<hr>
+<button [disabled]="!allowNewStudent" (mouseover)="onAddingStudent()" class="btn btn-primary">Add Student</button>
+<p [innerText]="studetnAddingStatus"></p>
+<p *ngIf="studentAdded; else noStudent">Dodat je student sa imenom {{studentIme}}</p>
+<ng-template #noStudent>
+    <p>Nije dodat ni jedan student!</p>
+</ng-template>
+<div>
+    <app-student *ngFor="let student of students" [stud]="student"></app-student>
+</div>
+
