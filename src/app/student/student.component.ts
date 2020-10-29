@@ -6,8 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent {
-  
-  @Input() student: {tip: string, ime: string, sadrzaj:string}
+  @Input('student') ime: string
+  //Otkomentarisati za @Input i @Output primjer
+  //@Input() student: { tip:string, ime:string};
   studentId: number = 2;
   studentStatus: string = 'online';
 

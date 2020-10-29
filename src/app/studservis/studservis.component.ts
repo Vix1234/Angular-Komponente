@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-studservis',
@@ -6,9 +6,10 @@ import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from '
   styleUrls: ['./studservis.component.css']
 })
 export class StudservisComponent implements OnInit {
+ 
   @Output() studentKreiranMed = new EventEmitter<{ime:string, sadrzaj:string}>();
   @Output() studentKreiranPrav = new EventEmitter<{ime:string, sadrzaj:string}>();
-  @ViewChild('sadrzajStudenta') sadrzajStudenta: ElementRef;
+  noviSadrzaj = '';
 
   constructor() { }
 
@@ -18,14 +19,14 @@ export class StudservisComponent implements OnInit {
   dodajStudentaMed(imeStudenta: HTMLInputElement){
     this.studentKreiranMed.emit({
       ime:imeStudenta.value,
-      sadrzaj:this.sadrzajStudenta.nativeElement.value
+      sadrzaj:this.noviSadrzaj
     });
   }
 
   dodajStudentaPrav(imeStudenta: HTMLInputElement){
     this.studentKreiranPrav.emit({
       ime:imeStudenta.value,
-      sadrzaj:this.sadrzajStudenta.nativeElement.value
+      sadrzaj:this.noviSadrzaj
     });
   }
 }

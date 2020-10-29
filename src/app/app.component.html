@@ -1,17 +1,17 @@
-<!--The content below is only a placeholder and can be replaced.-->
+
 <div class="container">
   <h1>
     {{ title }}
   </h1>
   <hr>
-  <!--<app-students></app-students>!-->
-  <!--<app-student></app-student>!-->
+  <app-students></app-students>
 
+  <hr>
+  <!--<h1>@Input i @Output</h1>
   <app-studservis (studentKreiranMed)="dodajStudentaMed($event)"
           (studentKreiranPrav)="dodajStudentaPrav($event)" >
-
-</app-studservis>
-<div class="row">
-  <app-student *ngFor="let student of studenti" [student]="student"></app-student>
-</div>
+  </app-studservis>
+  <div class="row">
+    <app-student *ngFor="let student of studenti" [student]="student"></app-student><br>
+  </div>!-->
 </div>  

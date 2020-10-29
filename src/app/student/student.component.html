@@ -1,7 +1,11 @@
-<!--<p [ngStyle]="{'background-color': getColor()}" [ngClass]="{'online': studentStatus==='online'}">
-    {{'Student'}} with ID: {{studentId}} is {{getStudentStatus()}}
-</p>!-->
+<!--Data binding primjer-->
+<p [ngStyle]="{'background-color': getColor()}" [ngClass]="{'online': studentStatus==='online'}">
+    Student {{ime}} with ID: {{studentId}} is {{getStudentStatus()}}
+</p>
 
-<div>{{student.ime}}</div>
-<strong *ngIf="student.tip === 'studentMedicine'" style="color: green">{{student.tip}}</strong>
-<em *ngIf="student.tip === 'studentPrava'" style="color: red">{{student.tip}}</em>
+<!--Prikaz za primjer @Input i @Output-->
+<!--<div>
+    <div>{{student.ime}}</div>
+    <strong *ngIf="student.tip === 'studentMedicine'" style="color: green">{{student.tip}}</strong>
+    <em *ngIf="student.tip === 'studentPrava'" style="color: red">{{student.tip}}</em>
+</div>!-->
